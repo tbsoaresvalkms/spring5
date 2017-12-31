@@ -1,7 +1,6 @@
 package com.tbsoaresvalkms.spring5webapp.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.ManyToAny;
 
 import javax.persistence.*;
@@ -11,6 +10,11 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
+@EqualsAndHashCode
+@ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,5 +22,5 @@ public class Author {
     private String firstName;
     private String lastName;
     @ManyToMany(mappedBy = "authors")
-    private Set<Book> books = new HashSet<>();
+    private Set<Book> books;
 }
