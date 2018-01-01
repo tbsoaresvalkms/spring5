@@ -11,7 +11,6 @@ import javax.persistence.Id;
 @Getter
 @Entity
 @EqualsAndHashCode
-@ToString
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,4 +20,12 @@ public class Publisher {
     private Long id;
     private String name;
     private String address;
+
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
