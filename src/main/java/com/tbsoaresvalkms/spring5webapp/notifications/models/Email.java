@@ -1,5 +1,8 @@
 package com.tbsoaresvalkms.spring5webapp.notifications.models;
 
+import lombok.Builder;
+
+@Builder
 public class Email implements NotificationObject {
 
     private String destiny;

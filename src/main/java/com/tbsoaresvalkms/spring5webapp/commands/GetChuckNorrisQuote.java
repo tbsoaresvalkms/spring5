@@ -1,13 +1,14 @@
-package com.tbsoaresvalkms.spring5webapp.services;
+package com.tbsoaresvalkms.spring5webapp.commands;
 
+import com.tbsoaresvalkms.spring5webapp.commands.interfaces.CommandQuery;
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ChuckNorrisServices implements ServicesQuery<String> {
+public class GetChuckNorrisQuote implements CommandQuery<String> {
     private ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public ChuckNorrisServices(ChuckNorrisQuotes chuckNorrisQuotes) {
+    public GetChuckNorrisQuote(ChuckNorrisQuotes chuckNorrisQuotes) {
         this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
