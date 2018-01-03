@@ -1,15 +1,8 @@
 package com.tbsoaresvalkms.spring5webapp.notifications.services;
 
 import com.tbsoaresvalkms.spring5webapp.notifications.models.Email;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 @Profile("production")
 @Component
